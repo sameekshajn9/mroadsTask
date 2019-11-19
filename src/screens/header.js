@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dimensionScreen, AppColors } from '../theme';
+import { dimensionScreen, AppColors, getWidth, getHeight } from '../theme';
 import {
   SafeAreaView,
   View,
@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { loginUser } from '../store/actions';
-import { Body, Left, Right, Tab } from 'native-base';
+import { Body, Left, Right } from 'native-base';
 
 class Header extends Component {
   render() {
@@ -41,7 +41,7 @@ class Header extends Component {
         </Left>
         <Body>
           <Text
-            style={{ fontSize: 12, fontWeight: '600', color: AppColors.white }}
+            style={{ fontSize: 18, fontWeight: '600', color: AppColors.white }}
           >
             {title}
           </Text>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     marginTop: 0
   },
   button: {
-    height: 50,
-    width: 12
+    height: getHeight(50),
+    width: getWidth(12)
   }
 });

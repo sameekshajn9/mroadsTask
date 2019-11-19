@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dimensionScreen, AppColors } from '../theme';
+import { dimensionScreen, AppColors, getHeight, getWidth } from '../theme';
 import {
   SafeAreaView,
   View,
@@ -43,7 +43,7 @@ class RestaurantList extends Component {
         >
           <Image
             source={{ url: item.imageUrl }}
-            style={{ height: 190, width: 340 }}
+            style={{ height: getHeight(190), width: getWidth(340) }}
 
             //   height={45}
             //   width={45}
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     elevation: 0
   },
   detailView: {
-    height: 60,
+    height: getHeight(60),
     // backgroundColor: 'yellow',
     flexDirection: 'row',
     alignItems: 'center',

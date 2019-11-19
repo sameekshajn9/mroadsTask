@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dimensionScreen, AppColors } from '../theme';
+import { dimensionScreen, AppColors, getHeight, getWidth } from '../theme';
 import {
   SafeAreaView,
   View,
@@ -63,7 +63,7 @@ class Login extends Component {
             <Text
               style={[
                 styles.labelText,
-                { fontSize: 10, alignSelf: 'center', marginTop: 19 }
+                { fontSize: 10, alignSelf: 'center', marginTop: getHeight(20) }
               ]}
             >
               FORGOT YOUR PASSWORD?{' '}
@@ -142,16 +142,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   LoginCard: {
-    height: 417,
-    width: 319,
+    height: getHeight(417),
+    width: getWidth(319),
     backgroundColor: AppColors.white,
     borderRadius: 5,
     shadowColor: 'rgba(0,0,0,0.50)',
     shadowRadius: 4,
-    paddingHorizontal: 20,
+    paddingHorizontal: getWidth(20),
     elevation: 8,
     justifyContent: 'flex-end',
-    paddingBottom: 20
+    paddingBottom: getHeight(20)
   },
   labelText: {
     color: AppColors.labelColor,
@@ -160,41 +160,42 @@ const styles = StyleSheet.create({
   },
   textInputWrapper: {
     fontSize: 18,
-    paddingVertical: 3
+    paddingVertical: getHeight(3)
     // fontFamily: 'OpenSans',
   },
   addDetailWrapper: {
-    height: 43
+    height: getHeight(43),
+    marginTop: getHeight(10)
   },
   loginButton: {
-    height: 45,
-    width: 180,
-    borderRadius: 23,
+    height: getHeight(45),
+    width: getWidth(180),
+    borderRadius: getHeight(23),
     backgroundColor: AppColors.buttonColor,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    marginTop: 19
+    marginTop: getHeight(20)
   },
   buttonText: {
     color: AppColors.white,
     fontSize: 14
   },
   connectWithWrapper: {
-    marginTop: 39,
+    marginTop: getHeight(39),
     alignSelf: 'center',
     flexDirection: 'row',
-    height: 15,
-    paddingHorizontal: 20,
+    height: getHeight(15),
+    paddingHorizontal: getWidth(20),
     alignItems: 'center',
     justifyContent: 'center'
   },
   signMethods: {
-    marginTop: 10,
+    marginTop: getHeight(15),
     alignSelf: 'center',
     flexDirection: 'row',
-    height: 50,
-    paddingHorizontal: 20,
+    height: getHeight(50),
+    paddingHorizontal: getWidth(20),
     alignItems: 'center'
     // justifyContent: 'space-evenly',
   },

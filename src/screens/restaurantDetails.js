@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dimensionScreen, AppColors } from '../theme';
+import { dimensionScreen, AppColors, getWidth, getHeight } from '../theme';
 import {
   SafeAreaView,
   View,
@@ -102,14 +102,14 @@ class RestaurantDetails extends Component {
           >
             <Image
               source={require('../../assets/leaveTable.png')}
-              style={{ width: 18, height: 20 }}
+              style={{ width: getWidth(18), height: getHeight(20) }}
             />
             <Text
               style={{
                 fontSize: 14,
                 fontWeight: '600',
-                marginLeft: 10,
-                marginRight: 20
+                marginLeft: getWidth(10),
+                marginRight: getWidth(20)
               }}
             >
               Leave Table
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     padding: 0,
     shadowColor: 'rgba(0,0,0,0.50)',
     shadowRadius: 4,
-    marginHorizontal: 10,
+    marginHorizontal: getWidth(10),
     elevation: 8
     // backgroundColor: 'white'
   },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: getWidth(20),
     backgroundColor: 'transparent',
     // shadowColor: 'rgba(0,0,0,0.50)',
     // shadowRadius: 4,
@@ -174,8 +174,8 @@ const styles = StyleSheet.create({
       height: 2
     },
     shadowOpacity: 0.4,
-    height: 95,
-    width: 95,
+    height: getHeight(120),
+    width: getHeight(120),
     borderColor: 'grey',
     borderWidth: 1,
     // paddingHorizontal: 20,
