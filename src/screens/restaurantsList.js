@@ -43,7 +43,7 @@ class RestaurantList extends Component {
         >
           <Image
             source={{ url: item.imageUrl }}
-            style={{ height: 190, width: 360 }}
+            style={{ height: 190, width: 340 }}
 
             //   height={45}
             //   width={45}
@@ -111,16 +111,16 @@ const styles = StyleSheet.create({
   restaurantCard: {
     marginTop: 10,
     borderRadius: 5,
-    overflow: 'hidden',
+    // overflow: 'hidden',
     padding: 0,
-    shadowColor: 'black',
-    // shadowRadius: 4,
+    shadowColor: '#000',
+    shadowRadius: 4,
     marginHorizontal: 10,
     elevation: 8,
     backgroundColor: 'white',
     shadowOffset: {
-      width: 2,
-      height: 4
+      width: 0,
+      height: 2
     },
     shadowOpacity: 0.4,
     // shadowRadius: 0,

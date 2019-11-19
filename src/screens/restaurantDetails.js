@@ -167,10 +167,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   typeView: {
-    shadowColor: 'black',
-    shadowRadius: 7,
-    borderRadius: 4,
+    shadowRadius: 4,
     elevation: 8,
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.4,
     height: 95,
     width: 95,
     borderColor: 'grey',
