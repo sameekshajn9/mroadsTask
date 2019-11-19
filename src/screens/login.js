@@ -107,6 +107,8 @@ class Login extends Component {
   }
 
   handleOnButtonClick = () => {
+    const { navigation } = this.props;
+    // navigation.navigate('RestaurantList');
     const { userName, password } = this.state;
     const { loginUserAction } = this.props;
     loginUserAction({ userName, password });
@@ -147,6 +149,7 @@ const styles = StyleSheet.create({
     shadowColor: 'rgba(0,0,0,0.50)',
     shadowRadius: 4,
     paddingHorizontal: 20,
+    elevation: 8,
     justifyContent: 'flex-end',
     paddingBottom: 20
   },
